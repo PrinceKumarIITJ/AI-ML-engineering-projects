@@ -1,0 +1,261 @@
+Review_ID,Product_ID,Brand,Rating,Review_Text,Date,Verified_Purchase,Sentiment_Score,Aspects,Aspect_wheels,Aspect_handle,Aspect_material,Aspect_zipper,Aspect_size,Aspect_durability,Is_Suspicious,Suspicious_Reason
+R00001,P0010,Safari,4.0,Good product. looks premium. Also zipper works fine.,2023-04-09,False,0.5719,{'zipper': 0.2023},,,,0.2023,,,False,
+R00002,P0003,Safari,3.0,"Average bag. fits a lot, but handle broke.",2023-06-25,True,-0.5719,"{'handle': -0.5719, 'size': -0.5719, 'durability': -0.5719}",,-0.5719,,,-0.5719,-0.5719,True,Duplicate Review Text
+R00003,P0001,Safari,5.0,Good product. spacious. Also wheels glide easily.,2023-09-09,True,0.6486,"{'wheels': 0.34, 'size': 0.0}",0.34,,,,0.0,,False,
+R00004,P0015,Safari,2.0,Disappointed. broken wheel after 1 trip. Would not recommend.,2023-06-10,True,-0.8079,"{'wheels': -0.4767, 'durability': -0.4767}",-0.4767,,,,,-0.4767,True,Duplicate Review Text
+R00005,P0008,Safari,4.0,Good product. very durable. Also scratch resistant.,2023-11-04,True,0.4404,"{'material': 0.0, 'durability': 0.0}",,,0.0,,,0.0,True,Duplicate Review Text
+R00006,P0005,Safari,5.0,Excellent product very good quality I love this bag very much value for money.,2023-10-10,True,0.9296,{},,,,,,,True,Duplicate Review Text
+R00007,P0005,Safari,3.0,"Average bag. perfect cabin size, but wobbly handle.",2023-04-22,True,0.3291,"{'handle': 0.3291, 'size': 0.3291}",,0.3291,,,0.3291,,True,Duplicate Review Text
+R00008,P0009,Safari,3.0,"Average bag. spacious, but handle jammed.",2023-11-14,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00009,P0001,Safari,5.0,Excellent product very good quality I love this bag very much value for money.,2023-10-11,True,0.9296,{},,,,,,,True,Duplicate Review Text
+R00010,P0003,Safari,3.0,"Average bag. good capacity, but handle jammed.",2023-02-03,True,0.2382,"{'handle': 0.2382, 'size': 0.2382}",,0.2382,,,0.2382,,True,Duplicate Review Text
+R00011,P0009,Safari,5.0,Excellent product very good quality I love this bag very much value for money.,2023-10-12,True,0.9296,{},,,,,,,True,Duplicate Review Text
+R00012,P0007,Safari,5.0,Excellent product very good quality I love this bag very much value for money.,2023-10-12,True,0.9296,{},,,,,,,True,Duplicate Review Text
+R00013,P0015,Safari,2.0,Disappointed. wheels are noisy. Would not recommend.,2023-04-22,True,-0.7105,{'wheels': -0.1779},-0.1779,,,,,,True,Duplicate Review Text
+R00014,P0011,Safari,5.0,Excellent product very good quality I love this bag very much value for money.,2023-10-14,False,0.9296,{},,,,,,,True,Duplicate Review Text
+R00015,P0010,Safari,2.0,Disappointed. flimsy handle. Would not recommend.,2023-03-14,True,-0.6381,{'handle': 0.0},,0.0,,,,,False,
+R00016,P0003,Safari,5.0,Good product. looks premium. Also fits a lot.,2023-03-26,True,0.4404,{'size': 0.0},,,,,0.0,,False,
+R00017,P0007,Safari,3.0,"Average bag. good capacity, but flimsy handle.",2023-04-27,False,0.2382,"{'handle': 0.2382, 'size': 0.2382}",,0.2382,,,0.2382,,True,Duplicate Review Text
+R00018,P0006,Safari,3.0,"Average bag. perfect cabin size, but flimsy handle.",2023-01-22,True,0.3291,"{'handle': 0.3291, 'size': 0.3291}",,0.3291,,,0.3291,,True,Duplicate Review Text
+R00019,P0007,Safari,5.0,Good product. 360 degree wheels are great. Also secure lock and zips.,2023-11-27,True,0.8555,"{'wheels': 0.6249, 'zipper': 0.34}",0.6249,,,0.34,,,False,
+R00020,P0001,Safari,5.0,Excellent product very good quality I love this bag very much value for money.,2023-10-12,True,0.9296,{},,,,,,,True,Duplicate Review Text
+R00021,P0010,Safari,4.0,Good product. tough material. Also roller is excellent.,2023-06-24,True,0.7269,"{'wheels': 0.5719, 'material': -0.128, 'durability': -0.128}",0.5719,,-0.128,,,-0.128,True,Duplicate Review Text
+R00022,P0007,Safari,5.0,Good product. good capacity. Also wheels glide easily.,2023-05-02,False,0.802,"{'wheels': 0.34, 'size': 0.4404}",0.34,,,,0.4404,,False,
+R00023,P0001,Safari,2.0,Disappointed. doesn't fit 15kg. Would not recommend.,2023-06-14,True,-0.7446,{'size': -0.2755},,,,,-0.2755,,True,Duplicate Review Text
+R00024,P0011,Safari,4.0,Good product. spacious. Also scratch resistant.,2023-09-10,False,0.4404,"{'material': 0.0, 'size': 0.0}",,,0.0,,0.0,,True,Duplicate Review Text
+R00025,P0006,Safari,4.0,Good product. looks premium. Also survived flight drops.,2023-07-22,False,0.7351,{},,,,,,,False,
+R00026,P0011,Safari,5.0,Good product. handle feels strong. Also sturdy build.,2023-09-27,True,0.7351,"{'handle': 0.5106, 'durability': 0.0}",,0.5106,,,,0.0,False,
+R00027,P0005,Safari,2.0,Disappointed. stuck zipper. Would not recommend.,2023-08-15,False,-0.7359,{'zipper': -0.25},,,,-0.25,,,False,
+R00028,P0011,Safari,3.0,"Average bag. good capacity, but flimsy handle.",2023-11-03,True,0.2382,"{'handle': 0.2382, 'size': 0.2382}",,0.2382,,,0.2382,,True,Duplicate Review Text
+R00029,P0009,Safari,4.0,Good product. spacious. Also looks premium.,2023-11-10,True,0.4404,{'size': 0.0},,,,,0.0,,True,Duplicate Review Text
+R00030,P0013,Safari,5.0,Excellent product very good quality I love this bag very much value for money.,2023-10-10,True,0.9296,{},,,,,,,True,Duplicate Review Text
+R00031,P0004,Safari,4.0,Good product. good capacity. Also roller is excellent.,2023-11-19,True,0.8591,"{'wheels': 0.5719, 'size': 0.4404}",0.5719,,,,0.4404,,False,
+R00032,P0012,Safari,4.0,Good product. heavy duty zips. Also perfect cabin size.,2023-11-23,True,0.765,"{'zipper': 0.0, 'size': 0.5719}",,,,0.0,0.5719,,False,
+R00033,P0015,Safari,3.0,"Average bag. spacious, but handle broke.",2023-04-06,False,-0.5719,"{'handle': -0.5719, 'size': -0.5719, 'durability': -0.5719}",,-0.5719,,,-0.5719,-0.5719,True,Duplicate Review Text
+R00034,P0001,Safari,4.0,Good product. wheels glide easily. Also good capacity.,2023-11-17,True,0.802,"{'wheels': 0.34, 'size': 0.4404}",0.34,,,,0.4404,,True,Duplicate Review Text
+R00035,P0013,Safari,4.0,Good product. good capacity. Also sturdy build.,2023-03-24,False,0.7003,"{'size': 0.4404, 'durability': 0.0}",,,,,0.4404,0.0,False,
+R00036,P0008,Safari,2.0,Disappointed. wobbly handle. Would not recommend.,2023-09-16,True,-0.6381,{'handle': 0.0},,0.0,,,,,False,
+R00037,P0005,Safari,5.0,Good product. survived flight drops. Also scratch resistant.,2023-06-11,True,0.7351,{'material': 0.0},,,0.0,,,,False,
+R00038,P0003,Safari,5.0,Excellent product very good quality I love this bag very much value for money.,2023-10-13,True,0.9296,{},,,,,,,True,Duplicate Review Text
+R00039,P0012,Safari,2.0,Disappointed. poor quality zips. Would not recommend.,2023-06-18,False,-0.8079,{'zipper': -0.4767},,,,-0.4767,,,True,Duplicate Review Text
+R00040,P0007,Safari,5.0,Excellent product very good quality I love this bag very much value for money.,2023-10-13,False,0.9296,{},,,,,,,True,Duplicate Review Text
+R00041,P0015,Safari,2.0,Disappointed. broke on first use. Would not recommend.,2023-10-13,False,-0.7912,{'durability': -0.4215},,,,,,-0.4215,True,Duplicate Review Text
+R00042,P0001,Safari,4.0,Good product. hard shell is good. Also perfect cabin size.,2023-08-08,True,0.8442,"{'material': 0.3612, 'size': 0.5719}",,,0.3612,,0.5719,,False,
+R00043,P0007,Safari,5.0,Good product. secure lock and zips. Also looks premium.,2023-08-05,True,0.6486,{'zipper': 0.34},,,,0.34,,,False,
+R00044,P0015,Safari,3.0,"Average bag. spacious, but handle jammed.",2023-11-14,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00045,P0014,Safari,4.0,Good product. roller is excellent. Also zipper works fine.,2023-04-15,True,0.8126,"{'wheels': 0.5719, 'zipper': 0.2023}",0.5719,,,0.2023,,,True,Duplicate Review Text
+R00046,P0006,Safari,4.0,Good product. secure lock and zips. Also scratch resistant.,2023-02-16,True,0.6486,"{'material': 0.0, 'zipper': 0.34}",,,0.0,0.34,,,False,
+R00047,P0012,Safari,4.0,Good product. tough material. Also sturdy handle.,2023-01-08,True,0.34,"{'handle': 0.0, 'material': -0.128, 'durability': -0.064}",,0.0,-0.128,,,-0.064,False,
+R00048,P0014,Safari,5.0,Excellent product very good quality I love this bag very much value for money.,2023-10-11,True,0.9296,{},,,,,,,True,Duplicate Review Text
+R00049,P0003,Safari,3.0,"Average bag. spacious, but flimsy handle.",2023-08-23,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00050,P0013,Safari,3.0,"Average bag. spacious, but flimsy handle.",2023-05-04,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00051,P0015,Safari,3.0,"Average bag. good capacity, but handle broke.",2023-12-07,True,-0.4118,"{'handle': -0.4118, 'size': -0.4118, 'durability': -0.4118}",,-0.4118,,,-0.4118,-0.4118,False,
+R00052,P0010,Safari,2.0,Disappointed. cracked shell. Would not recommend.,2023-02-23,True,-0.6381,"{'material': 0.0, 'durability': 0.0}",,,0.0,,,0.0,False,
+R00053,P0014,Safari,3.0,"Average bag. spacious, but handle jammed.",2023-06-18,False,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00054,P0011,Safari,4.0,Good product. spacious. Also hard shell is good.,2023-08-04,False,0.6597,"{'material': 0.3612, 'size': 0.0}",,,0.3612,,0.0,,True,Duplicate Review Text
+R00055,P0006,Safari,4.0,Good product. secure lock and zips. Also telescopic handle is good.,2023-12-17,True,0.802,"{'handle': 0.4404, 'zipper': 0.34}",,0.4404,,0.34,,,True,Duplicate Review Text
+R00056,P0010,Safari,4.0,Good product. good capacity. Also secure lock and zips.,2023-12-19,True,0.802,"{'zipper': 0.34, 'size': 0.4404}",,,,0.34,0.4404,,False,
+R00057,P0006,Safari,4.0,Good product. roller is excellent. Also heavy duty zips.,2023-08-19,False,0.765,"{'wheels': 0.5719, 'zipper': 0.0}",0.5719,,,0.0,,,False,
+R00058,P0006,Safari,5.0,Excellent product very good quality I love this bag very much value for money.,2023-10-12,True,0.9296,{},,,,,,,True,Duplicate Review Text
+R00059,P0008,Safari,3.0,"Average bag. fits a lot, but wobbly handle.",2023-05-20,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00060,P0009,Safari,5.0,Excellent product very good quality I love this bag very much value for money.,2023-10-11,True,0.9296,{},,,,,,,True,Duplicate Review Text
+R00061,P0004,Safari,5.0,Good product. heavy duty zips. Also sturdy build.,2023-11-23,False,0.4404,"{'zipper': 0.0, 'durability': 0.0}",,,,0.0,,0.0,False,
+R00062,P0008,Safari,2.0,Disappointed. wheels are noisy. Would not recommend.,2023-04-13,True,-0.7105,{'wheels': -0.1779},-0.1779,,,,,,True,Duplicate Review Text
+R00063,P0005,Safari,2.0,Disappointed. material feels thin. Would not recommend.,2023-09-17,True,-0.6381,{'material': 0.0},,,0.0,,,,False,
+R00064,P0007,Safari,4.0,Good product. fits a lot. Also hard shell is good.,2023-05-10,True,0.6597,"{'material': 0.3612, 'size': 0.0}",,,0.3612,,0.0,,False,
+R00065,P0004,Safari,5.0,Excellent product very good quality I love this bag very much value for money.,2023-10-11,True,0.9296,{},,,,,,,True,Duplicate Review Text
+R00066,P0017,Skybags,4.0,Good product. survived flight drops. Also telescopic handle is good.,2023-12-16,True,0.8442,{'handle': 0.4404},,0.4404,,,,,False,
+R00067,P0027,Skybags,4.0,Good product. fits a lot. Also very durable.,2023-04-10,True,0.4404,"{'size': 0.0, 'durability': 0.0}",,,,,0.0,0.0,False,
+R00068,P0021,Skybags,4.0,The bag looks good and the size is great. But cracked shell. Surprising for this rating.,2023-05-02,True,0.7311,"{'material': 0.0, 'size': 0.7906, 'durability': 0.0}",,,0.0,,0.7906,0.0,True,Duplicate Review Text
+R00069,P0024,Skybags,4.0,The bag looks good and the size is great. But poor quality over time. Surprising for this rating.,2023-02-28,True,0.25,{'size': 0.7906},,,,,0.7906,,True,Duplicate Review Text
+R00070,P0025,Skybags,5.0,The bag looks good and the size is great. But poor quality over time. Surprising for this rating.,2023-06-06,True,0.25,{'size': 0.7906},,,,,0.7906,,True,Duplicate Review Text
+R00071,P0020,Skybags,3.0,"Average bag. good capacity, but handle jammed.",2023-02-13,False,0.2382,"{'handle': 0.2382, 'size': 0.2382}",,0.2382,,,0.2382,,True,Duplicate Review Text
+R00072,P0017,Skybags,4.0,Good product. survived flight drops. Also wheels glide easily.,2023-10-10,True,0.8225,{'wheels': 0.34},0.34,,,,,,True,Duplicate Review Text
+R00073,P0019,Skybags,5.0,The bag looks good and the size is great. But cracked shell. Surprising for this rating.,2023-09-13,False,0.7311,"{'material': 0.0, 'size': 0.7906, 'durability': 0.0}",,,0.0,,0.7906,0.0,True,Duplicate Review Text
+R00074,P0030,Skybags,2.0,Disappointed. awkward dimensions. Would not recommend.,2023-05-19,True,-0.7013,{},,,,,,,False,
+R00075,P0025,Skybags,4.0,Good product. wheels glide easily. Also scratch resistant.,2023-11-03,True,0.6486,"{'wheels': 0.34, 'material': 0.0}",0.34,,0.0,,,,False,
+R00076,P0019,Skybags,4.0,The bag looks good and the size is great. But cracked shell. Surprising for this rating.,2023-01-14,False,0.7311,"{'material': 0.0, 'size': 0.7906, 'durability': 0.0}",,,0.0,,0.7906,0.0,True,Duplicate Review Text
+R00077,P0027,Skybags,2.0,Disappointed. scratches easily. Would not recommend.,2023-04-10,True,-0.4234,{'material': 0.34},,,0.34,,,,True,Duplicate Review Text
+R00078,P0027,Skybags,3.0,"Average bag. spacious, but flimsy handle.",2023-05-26,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00079,P0022,Skybags,4.0,The bag looks good and the size is great. But cracked shell. Surprising for this rating.,2023-05-27,True,0.7311,"{'material': 0.0, 'size': 0.7906, 'durability': 0.0}",,,0.0,,0.7906,0.0,True,Duplicate Review Text
+R00080,P0017,Skybags,5.0,The bag looks good and the size is great. But not durable at all. Surprising for this rating.,2023-08-04,False,0.7311,"{'size': 0.7906, 'durability': 0.0}",,,,,0.7906,0.0,True,Duplicate Review Text
+R00081,P0027,Skybags,4.0,Good product. secure lock and zips. Also hard shell is good.,2023-02-20,True,0.7783,"{'material': 0.3612, 'zipper': 0.34}",,,0.3612,0.34,,,False,
+R00082,P0030,Skybags,4.0,Good product. scratch resistant. Also very durable.,2023-02-08,True,0.4404,"{'material': 0.0, 'durability': 0.0}",,,0.0,,,0.0,False,
+R00083,P0028,Skybags,5.0,Good product. tough material. Also survived flight drops.,2023-08-17,False,0.6908,"{'material': -0.128, 'durability': -0.128}",,,-0.128,,,-0.128,False,
+R00084,P0030,Skybags,5.0,The bag looks good and the size is great. But poor quality over time. Surprising for this rating.,2023-02-16,True,0.25,{'size': 0.7906},,,,,0.7906,,True,Duplicate Review Text
+R00085,P0022,Skybags,2.0,Disappointed. broke on first use. Would not recommend.,2023-03-11,False,-0.7912,{'durability': -0.4215},,,,,,-0.4215,True,Duplicate Review Text
+R00086,P0027,Skybags,2.0,Disappointed. poor quality over time. Would not recommend.,2023-09-02,False,-0.8079,{},,,,,,,True,Duplicate Review Text
+R00087,P0017,Skybags,4.0,Good product. hard shell is good. Also smooth wheels.,2023-11-28,False,0.6597,"{'wheels': 0.0, 'material': 0.3612}",0.0,,0.3612,,,,False,
+R00088,P0022,Skybags,5.0,The bag looks good and the size is great. But poor quality over time. Surprising for this rating.,2023-11-15,True,0.25,{'size': 0.7906},,,,,0.7906,,True,Duplicate Review Text
+R00089,P0019,Skybags,4.0,The bag looks good and the size is great. But not durable at all. Surprising for this rating.,2023-08-23,False,0.7311,"{'size': 0.7906, 'durability': 0.0}",,,,,0.7906,0.0,True,Duplicate Review Text
+R00090,P0017,Skybags,4.0,The bag looks good and the size is great. But cracked shell. Surprising for this rating.,2023-05-18,True,0.7311,"{'material': 0.0, 'size': 0.7906, 'durability': 0.0}",,,0.0,,0.7906,0.0,True,Duplicate Review Text
+R00091,P0024,Skybags,4.0,Good product. comfortable grip. Also smooth wheels.,2023-11-27,True,0.7351,"{'wheels': 0.0, 'handle': 0.5106}",0.0,0.5106,,,,,False,
+R00092,P0023,Skybags,4.0,Good product. scratch resistant. Also sturdy build.,2023-08-16,True,0.4404,"{'material': 0.0, 'durability': 0.0}",,,0.0,,,0.0,False,
+R00093,P0023,Skybags,4.0,Good product. heavy duty zips. Also sturdy handle.,2023-05-25,False,0.4404,"{'handle': 0.0, 'zipper': 0.0, 'durability': 0.0}",,0.0,,0.0,,0.0,False,
+R00094,P0021,Skybags,4.0,Good product. spacious. Also scratch resistant.,2023-12-10,False,0.4404,"{'material': 0.0, 'size': 0.0}",,,0.0,,0.0,,True,Duplicate Review Text
+R00095,P0029,Skybags,5.0,The bag looks good and the size is great. But not durable at all. Surprising for this rating.,2023-06-18,False,0.7311,"{'size': 0.7906, 'durability': 0.0}",,,,,0.7906,0.0,True,Duplicate Review Text
+R00096,P0023,Skybags,4.0,Good product. comfortable grip. Also looks premium.,2023-07-02,True,0.7351,{'handle': 0.5106},,0.5106,,,,,False,
+R00097,P0027,Skybags,2.0,Disappointed. poor quality zips. Would not recommend.,2023-11-26,True,-0.8079,{'zipper': -0.4767},,,,-0.4767,,,True,Duplicate Review Text
+R00098,P0023,Skybags,3.0,"Average bag. perfect cabin size, but wobbly handle.",2023-02-28,False,0.3291,"{'handle': 0.3291, 'size': 0.3291}",,0.3291,,,0.3291,,True,Duplicate Review Text
+R00099,P0017,Skybags,3.0,"Average bag. good capacity, but handle jammed.",2023-12-05,False,0.2382,"{'handle': 0.2382, 'size': 0.2382}",,0.2382,,,0.2382,,True,Duplicate Review Text
+R00100,P0029,Skybags,3.0,"Average bag. perfect cabin size, but handle jammed.",2023-08-26,True,0.3291,"{'handle': 0.3291, 'size': 0.3291}",,0.3291,,,0.3291,,True,Duplicate Review Text
+R00101,P0021,Skybags,5.0,Good product. zipper works fine. Also roller is excellent.,2023-06-21,False,0.8126,"{'wheels': 0.5719, 'zipper': 0.2023}",0.5719,,,0.2023,,,False,
+R00102,P0029,Skybags,1.0,Disappointed. smaller than expected. Would not recommend.,2023-04-21,True,-0.6381,{},,,,,,,False,
+R00103,P0019,Skybags,4.0,Good product. smooth zipper. Also roller is excellent.,2023-03-23,True,0.765,"{'wheels': 0.5719, 'zipper': 0.0}",0.5719,,,0.0,,,False,
+R00104,P0030,Skybags,5.0,The bag looks good and the size is great. But broke on first use. Surprising for this rating.,2023-05-12,True,0.3506,"{'size': 0.7906, 'durability': -0.5719}",,,,,0.7906,-0.5719,False,
+R00105,P0022,Skybags,5.0,The bag looks good and the size is great. But cracked shell. Surprising for this rating.,2023-03-06,True,0.7311,"{'material': 0.0, 'size': 0.7906, 'durability': 0.0}",,,0.0,,0.7906,0.0,True,Duplicate Review Text
+R00106,P0025,Skybags,5.0,Good product. good capacity. Also telescopic handle is good.,2023-04-15,True,0.8271,"{'handle': 0.4404, 'size': 0.4404}",,0.4404,,,0.4404,,False,
+R00107,P0023,Skybags,4.0,The bag looks good and the size is great. But poor quality over time. Surprising for this rating.,2023-05-22,True,0.25,{'size': 0.7906},,,,,0.7906,,True,Duplicate Review Text
+R00108,P0017,Skybags,2.0,Disappointed. dent on arrival. Would not recommend.,2023-11-14,True,-0.6381,{},,,,,,,False,
+R00109,P0023,Skybags,2.0,Disappointed. handle broke. Would not recommend.,2023-08-04,True,-0.7912,"{'handle': -0.4215, 'durability': -0.4215}",,-0.4215,,,,-0.4215,False,
+R00110,P0022,Skybags,4.0,Good product. fits a lot. Also tough material.,2023-11-13,True,0.34,"{'material': -0.128, 'size': 0.0, 'durability': -0.128}",,,-0.128,,0.0,-0.128,False,
+R00111,P0016,Skybags,3.0,"Average bag. spacious, but handle broke.",2023-05-25,True,-0.5719,"{'handle': -0.5719, 'size': -0.5719, 'durability': -0.5719}",,-0.5719,,,-0.5719,-0.5719,True,Duplicate Review Text
+R00112,P0025,Skybags,4.0,Good product. handle feels strong. Also looks premium.,2023-11-04,True,0.7351,{'handle': 0.5106},,0.5106,,,,,False,
+R00113,P0020,Skybags,3.0,"Average bag. spacious, but wobbly handle.",2023-12-05,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00114,P0030,Skybags,5.0,The bag looks good and the size is great. But cracked shell. Surprising for this rating.,2023-04-05,True,0.7311,"{'material': 0.0, 'size': 0.7906, 'durability': 0.0}",,,0.0,,0.7906,0.0,True,Duplicate Review Text
+R00115,P0024,Skybags,5.0,Good product. scratch resistant. Also comfortable grip.,2023-05-24,True,0.7351,"{'handle': 0.5106, 'material': 0.0}",,0.5106,0.0,,,,False,
+R00116,P0028,Skybags,4.0,The bag looks good and the size is great. But cracked shell. Surprising for this rating.,2023-04-28,False,0.7311,"{'material': 0.0, 'size': 0.7906, 'durability': 0.0}",,,0.0,,0.7906,0.0,True,Duplicate Review Text
+R00117,P0029,Skybags,1.0,Disappointed. scratches easily. Would not recommend.,2023-07-01,True,-0.4234,{'material': 0.34},,,0.34,,,,True,Duplicate Review Text
+R00118,P0024,Skybags,5.0,The bag looks good and the size is great. But not durable at all. Surprising for this rating.,2023-10-13,True,0.7311,"{'size': 0.7906, 'durability': 0.0}",,,,,0.7906,0.0,True,Duplicate Review Text
+R00119,P0017,Skybags,3.0,"Average bag. good capacity, but handle jammed.",2023-10-18,True,0.2382,"{'handle': 0.2382, 'size': 0.2382}",,0.2382,,,0.2382,,True,Duplicate Review Text
+R00120,P0030,Skybags,4.0,Good product. sturdy build. Also 360 degree wheels are great.,2023-11-14,True,0.7906,"{'wheels': 0.6249, 'durability': 0.0}",0.6249,,,,,0.0,True,Duplicate Review Text
+R00121,P0018,Skybags,4.0,The bag looks good and the size is great. But not durable at all. Surprising for this rating.,2023-08-04,True,0.7311,"{'size': 0.7906, 'durability': 0.0}",,,,,0.7906,0.0,True,Duplicate Review Text
+R00122,P0019,Skybags,3.0,"Average bag. perfect cabin size, but handle broke.",2023-08-12,False,-0.3291,"{'handle': -0.3291, 'size': -0.3291, 'durability': -0.3291}",,-0.3291,,,-0.3291,-0.3291,True,Duplicate Review Text
+R00123,P0025,Skybags,4.0,Good product. sturdy handle. Also good capacity.,2023-10-14,True,0.7003,"{'handle': 0.0, 'size': 0.4404, 'durability': 0.0}",,0.0,,,0.4404,0.0,False,
+R00124,P0016,Skybags,4.0,Good product. comfortable grip. Also perfect cabin size.,2023-06-04,True,0.872,"{'handle': 0.5106, 'size': 0.5719}",,0.5106,,,0.5719,,False,
+R00125,P0024,Skybags,2.0,Disappointed. not durable at all. Would not recommend.,2023-01-13,True,-0.6381,{'durability': 0.0},,,,,,0.0,False,
+R00126,P0019,Skybags,3.0,"Average bag. good capacity, but handle jammed.",2023-11-07,True,0.2382,"{'handle': 0.2382, 'size': 0.2382}",,0.2382,,,0.2382,,True,Duplicate Review Text
+R00127,P0016,Skybags,3.0,"Average bag. perfect cabin size, but flimsy handle.",2023-10-07,True,0.3291,"{'handle': 0.3291, 'size': 0.3291}",,0.3291,,,0.3291,,True,Duplicate Review Text
+R00128,P0029,Skybags,3.0,"Average bag. perfect cabin size, but flimsy handle.",2023-04-11,True,0.3291,"{'handle': 0.3291, 'size': 0.3291}",,0.3291,,,0.3291,,True,Duplicate Review Text
+R00129,P0028,Skybags,5.0,Good product. wheels glide easily. Also heavy duty zips.,2023-09-09,True,0.6486,"{'wheels': 0.34, 'zipper': 0.0}",0.34,,,0.0,,,False,
+R00130,P0017,Skybags,4.0,Good product. smooth wheels. Also scratch resistant.,2023-04-19,True,0.4404,"{'wheels': 0.0, 'material': 0.0}",0.0,,0.0,,,,True,Duplicate Review Text
+R00131,P0031,VIP,4.0,Worth the price. looks premium and roller is excellent.,2023-09-04,True,0.6808,{'wheels': 0.5719},0.5719,,,,,,False,
+R00132,P0038,VIP,4.0,Good product. tough material. Also sturdy build.,2023-09-08,True,0.34,"{'material': -0.128, 'durability': -0.064}",,,-0.128,,,-0.064,False,
+R00133,P0042,VIP,5.0,Good product. long lasting. Also good capacity.,2023-11-01,True,0.7003,"{'size': 0.4404, 'durability': 0.0}",,,,,0.4404,0.0,False,
+R00134,P0038,VIP,4.0,Good product. secure lock and zips. Also roller is excellent.,2023-02-03,True,0.8402,"{'wheels': 0.5719, 'zipper': 0.34}",0.5719,,,0.34,,,False,
+R00135,P0040,VIP,4.0,Worth the price. scratch resistant and 360 degree wheels are great.,2023-07-20,True,0.7184,"{'wheels': 0.6249, 'material': 0.6249}",0.6249,,0.6249,,,,False,
+R00136,P0038,VIP,3.0,"Average bag. good capacity, but handle jammed.",2023-12-04,True,0.2382,"{'handle': 0.2382, 'size': 0.2382}",,0.2382,,,0.2382,,True,Duplicate Review Text
+R00137,P0037,VIP,5.0,Good product. handle feels strong. Also good capacity.,2023-07-14,True,0.8442,"{'handle': 0.5106, 'size': 0.4404}",,0.5106,,,0.4404,,False,
+R00138,P0036,VIP,3.0,"Average bag. fits a lot, but wobbly handle.",2023-03-22,False,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00139,P0032,VIP,4.0,Worth the price. tough material and roller is excellent.,2023-02-24,True,0.6249,"{'wheels': 0.4939, 'material': 0.4939, 'durability': 0.4939}",0.4939,,0.4939,,,0.4939,False,
+R00140,P0043,VIP,4.0,Worth the price. scratch resistant and smooth wheels.,2023-07-12,False,0.2263,"{'wheels': 0.0, 'material': 0.0}",0.0,,0.0,,,,True,Duplicate Review Text
+R00141,P0044,VIP,3.0,"Average bag. spacious, but wobbly handle.",2023-10-10,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00142,P0032,VIP,3.0,"Average bag. perfect cabin size, but flimsy handle.",2023-11-16,True,0.3291,"{'handle': 0.3291, 'size': 0.3291}",,0.3291,,,0.3291,,True,Duplicate Review Text
+R00143,P0044,VIP,5.0,Worth the price. tough material and 360 degree wheels are great.,2023-10-08,False,0.6705,"{'wheels': 0.5574, 'material': 0.5574, 'durability': 0.5574}",0.5574,,0.5574,,,0.5574,False,
+R00144,P0044,VIP,3.0,"Average bag. spacious, but wobbly handle.",2023-01-06,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00145,P0042,VIP,4.0,Good product. tough material. Also heavy duty zips.,2023-03-19,False,0.34,"{'material': -0.128, 'zipper': 0.0, 'durability': -0.128}",,,-0.128,0.0,,-0.128,False,
+R00146,P0032,VIP,4.0,Worth the price. tough material and wheels glide easily.,2023-07-14,False,0.4215,"{'wheels': 0.2263, 'material': 0.2263, 'durability': 0.2263}",0.2263,,0.2263,,,0.2263,False,
+R00147,P0036,VIP,5.0,Worth the price. scratch resistant and smooth wheels.,2023-01-05,True,0.2263,"{'wheels': 0.0, 'material': 0.0}",0.0,,0.0,,,,True,Duplicate Review Text
+R00148,P0043,VIP,2.0,Disappointed. broke on first use. Would not recommend.,2023-05-15,False,-0.7912,{'durability': -0.4215},,,,,,-0.4215,True,Duplicate Review Text
+R00149,P0038,VIP,3.0,"Average bag. good capacity, but wobbly handle.",2023-04-25,True,0.2382,"{'handle': 0.2382, 'size': 0.2382}",,0.2382,,,0.2382,,True,Duplicate Review Text
+R00150,P0036,VIP,4.0,Good product. hard shell is good. Also long lasting.,2023-01-08,False,0.6597,"{'material': 0.3612, 'durability': 0.0}",,,0.3612,,,0.0,True,Duplicate Review Text
+R00151,P0040,VIP,4.0,Worth the price. scratch resistant and wheels glide easily.,2023-03-25,True,0.5106,"{'wheels': 0.34, 'material': 0.34}",0.34,,0.34,,,,True,Duplicate Review Text
+R00152,P0035,VIP,2.0,Disappointed. won't roll straight. Would not recommend.,2023-12-14,True,-0.7074,{},,,,,,,False,
+R00153,P0033,VIP,5.0,Good product. long lasting. Also sturdy handle.,2023-07-28,True,0.4404,"{'handle': 0.0, 'durability': 0.0}",,0.0,,,,0.0,False,
+R00154,P0037,VIP,4.0,Worth the price. scratch resistant and roller is excellent.,2023-10-13,False,0.6808,"{'wheels': 0.5719, 'material': 0.5719}",0.5719,,0.5719,,,,False,
+R00155,P0035,VIP,4.0,Worth the price. scratch resistant and wheels glide easily.,2023-10-15,True,0.5106,"{'wheels': 0.34, 'material': 0.34}",0.34,,0.34,,,,True,Duplicate Review Text
+R00156,P0032,VIP,4.0,Good product. roller is excellent. Also hard shell is good.,2023-09-03,False,0.8442,"{'wheels': 0.5719, 'material': 0.3612}",0.5719,,0.3612,,,,False,
+R00157,P0044,VIP,4.0,Good product. scratch resistant. Also telescopic handle is good.,2023-02-17,True,0.7003,"{'handle': 0.4404, 'material': 0.0}",,0.4404,0.0,,,,False,
+R00158,P0039,VIP,3.0,"Average bag. fits a lot, but wobbly handle.",2023-12-27,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00159,P0034,VIP,5.0,Worth the price. looks premium and wheels glide easily.,2023-10-05,True,0.5106,{'wheels': 0.34},0.34,,,,,,True,Duplicate Review Text
+R00160,P0033,VIP,4.0,Good product. sturdy build. Also secure lock and zips.,2023-11-19,True,0.6486,"{'zipper': 0.34, 'durability': 0.0}",,,,0.34,,0.0,False,
+R00161,P0044,VIP,4.0,Good product. hard shell is good. Also sturdy handle.,2023-08-15,True,0.6597,"{'handle': 0.0, 'material': 0.3612, 'durability': 0.0}",,0.0,0.3612,,,0.0,False,
+R00162,P0043,VIP,4.0,Good product. smooth wheels. Also zipper works fine.,2023-08-15,True,0.5719,"{'wheels': 0.0, 'zipper': 0.2023}",0.0,,,0.2023,,,True,Duplicate Review Text
+R00163,P0031,VIP,5.0,Good product. tough material. Also roller is excellent.,2023-08-19,True,0.7269,"{'wheels': 0.5719, 'material': -0.128, 'durability': -0.128}",0.5719,,-0.128,,,-0.128,True,Duplicate Review Text
+R00164,P0038,VIP,2.0,Disappointed. doesn't fit 15kg. Would not recommend.,2023-06-20,False,-0.7446,{'size': -0.2755},,,,,-0.2755,,True,Duplicate Review Text
+R00165,P0039,VIP,4.0,Worth the price. hard shell is good and smooth wheels.,2023-06-23,True,0.5267,"{'wheels': 0.3612, 'material': 0.3612}",0.3612,,0.3612,,,,True,Duplicate Review Text
+R00166,P0039,VIP,2.0,Disappointed. broken wheel after 1 trip. Would not recommend.,2023-12-15,False,-0.8079,"{'wheels': -0.4767, 'durability': -0.4767}",-0.4767,,,,,-0.4767,True,Duplicate Review Text
+R00167,P0039,VIP,4.0,Good product. handle feels strong. Also zipper works fine.,2023-07-14,True,0.7906,"{'handle': 0.5106, 'zipper': 0.2023}",,0.5106,,0.2023,,,False,
+R00168,P0041,VIP,4.0,Good product. very durable. Also scratch resistant.,2023-02-18,False,0.4404,"{'material': 0.0, 'durability': 0.0}",,,0.0,,,0.0,True,Duplicate Review Text
+R00169,P0035,VIP,4.0,Good product. survived flight drops. Also fits a lot.,2023-02-19,True,0.7351,{'size': 0.0},,,,,0.0,,False,
+R00170,P0045,VIP,3.0,"Average bag. good capacity, but flimsy handle.",2023-10-23,True,0.2382,"{'handle': 0.2382, 'size': 0.2382}",,0.2382,,,0.2382,,True,Duplicate Review Text
+R00171,P0035,VIP,4.0,Good product. survived flight drops. Also tough material.,2023-11-22,False,0.6908,"{'material': -0.128, 'durability': -0.128}",,,-0.128,,,-0.128,False,
+R00172,P0039,VIP,3.0,"Average bag. fits a lot, but wobbly handle.",2023-03-07,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00173,P0043,VIP,3.0,"Average bag. perfect cabin size, but flimsy handle.",2023-03-03,True,0.3291,"{'handle': 0.3291, 'size': 0.3291}",,0.3291,,,0.3291,,True,Duplicate Review Text
+R00174,P0044,VIP,5.0,Good product. spacious. Also long lasting.,2023-10-05,False,0.4404,"{'size': 0.0, 'durability': 0.0}",,,,,0.0,0.0,False,
+R00175,P0033,VIP,4.0,Worth the price. hard shell is good and smooth wheels.,2023-07-12,True,0.5267,"{'wheels': 0.3612, 'material': 0.3612}",0.3612,,0.3612,,,,True,Duplicate Review Text
+R00176,P0038,VIP,2.0,Disappointed. poor quality over time. Would not recommend.,2023-04-18,True,-0.8079,{},,,,,,,True,Duplicate Review Text
+R00177,P0035,VIP,5.0,Good product. zipper works fine. Also comfortable grip.,2023-08-25,True,0.7906,"{'handle': 0.5106, 'zipper': 0.2023}",,0.5106,,0.2023,,,True,Duplicate Review Text
+R00178,P0043,VIP,4.0,Good product. perfect cabin size. Also heavy duty zips.,2023-10-05,True,0.765,"{'zipper': 0.0, 'size': 0.5719}",,,,0.0,0.5719,,False,
+R00179,P0031,VIP,5.0,Good product. tough material. Also very durable.,2023-05-03,True,0.34,"{'material': -0.128, 'durability': -0.064}",,,-0.128,,,-0.064,False,
+R00180,P0035,VIP,5.0,Good product. good capacity. Also sturdy handle.,2023-04-27,False,0.7003,"{'handle': 0.0, 'size': 0.4404, 'durability': 0.0}",,0.0,,,0.4404,0.0,False,
+R00181,P0045,VIP,3.0,"Average bag. spacious, but handle broke.",2023-01-13,True,-0.5719,"{'handle': -0.5719, 'size': -0.5719, 'durability': -0.5719}",,-0.5719,,,-0.5719,-0.5719,True,Duplicate Review Text
+R00182,P0034,VIP,3.0,"Average bag. spacious, but wobbly handle.",2023-04-01,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00183,P0045,VIP,5.0,Worth the price. looks premium and wheels glide easily.,2023-01-10,False,0.5106,{'wheels': 0.34},0.34,,,,,,True,Duplicate Review Text
+R00184,P0042,VIP,5.0,Good product. sturdy build. Also smooth zipper.,2023-02-01,True,0.4404,"{'zipper': 0.0, 'durability': 0.0}",,,,0.0,,0.0,False,
+R00185,P0034,VIP,4.0,Good product. good capacity. Also very durable.,2023-05-08,True,0.7003,"{'size': 0.4404, 'durability': 0.0}",,,,,0.4404,0.0,False,
+R00186,P0032,VIP,5.0,Worth the price. hard shell is good and smooth wheels.,2023-02-27,False,0.5267,"{'wheels': 0.3612, 'material': 0.3612}",0.3612,,0.3612,,,,True,Duplicate Review Text
+R00187,P0040,VIP,5.0,Good product. survived flight drops. Also perfect cabin size.,2023-05-14,True,0.872,{'size': 0.5719},,,,,0.5719,,False,
+R00188,P0040,VIP,3.0,"Average bag. good capacity, but flimsy handle.",2023-11-22,True,0.2382,"{'handle': 0.2382, 'size': 0.2382}",,0.2382,,,0.2382,,True,Duplicate Review Text
+R00189,P0039,VIP,4.0,Good product. smooth wheels. Also sturdy build.,2023-08-02,False,0.4404,"{'wheels': 0.0, 'durability': 0.0}",0.0,,,,,0.0,False,
+R00190,P0036,VIP,4.0,Good product. smooth wheels. Also zipper works fine.,2023-04-24,True,0.5719,"{'wheels': 0.0, 'zipper': 0.2023}",0.0,,,0.2023,,,True,Duplicate Review Text
+R00191,P0043,VIP,3.0,"Average bag. fits a lot, but flimsy handle.",2023-01-12,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00192,P0044,VIP,5.0,Good product. sturdy build. Also heavy duty zips.,2023-03-03,False,0.4404,"{'zipper': 0.0, 'durability': 0.0}",,,,0.0,,0.0,True,Duplicate Review Text
+R00193,P0031,VIP,5.0,Good product. smooth wheels. Also scratch resistant.,2023-05-17,False,0.4404,"{'wheels': 0.0, 'material': 0.0}",0.0,,0.0,,,,True,Duplicate Review Text
+R00194,P0044,VIP,5.0,Good product. looks premium. Also 360 degree wheels are great.,2023-06-28,True,0.7906,{'wheels': 0.6249},0.6249,,,,,,False,
+R00195,P0044,VIP,5.0,Good product. scratch resistant. Also roller is excellent.,2023-07-24,False,0.765,"{'wheels': 0.5719, 'material': 0.0}",0.5719,,0.0,,,,False,
+R00196,P0060,American Tourister,4.0,Good product. heavy duty zips. Also hard shell is good.,2023-12-16,True,0.6597,"{'material': 0.3612, 'zipper': 0.0}",,,0.3612,0.0,,,True,Duplicate Review Text
+R00197,P0060,American Tourister,5.0,Good product. spacious. Also hard shell is good.,2023-02-14,True,0.6597,"{'material': 0.3612, 'size': 0.0}",,,0.3612,,0.0,,True,Duplicate Review Text
+R00198,P0054,American Tourister,4.0,Good product. tough material. Also smooth zipper.,2023-06-22,True,0.34,"{'material': -0.128, 'zipper': 0.0, 'durability': -0.128}",,,-0.128,0.0,,-0.128,False,
+R00199,P0050,American Tourister,4.0,Good product. secure lock and zips. Also survived flight drops.,2023-12-15,True,0.8225,{'zipper': 0.34},,,,0.34,,,True,Duplicate Review Text
+R00200,P0053,American Tourister,4.0,Good product. roller is excellent. Also zipper works fine.,2023-11-26,True,0.8126,"{'wheels': 0.5719, 'zipper': 0.2023}",0.5719,,,0.2023,,,True,Duplicate Review Text
+R00201,P0047,American Tourister,4.0,Good product. long lasting. Also heavy duty zips.,2023-01-05,False,0.4404,"{'zipper': 0.0, 'durability': 0.0}",,,,0.0,,0.0,False,
+R00202,P0046,American Tourister,4.0,Good product. telescopic handle is good. Also 360 degree wheels are great.,2023-06-13,True,0.872,"{'wheels': 0.6249, 'handle': 0.4404}",0.6249,0.4404,,,,,False,
+R00203,P0055,American Tourister,3.0,"Average bag. perfect cabin size, but handle broke.",2023-06-12,False,-0.3291,"{'handle': -0.3291, 'size': -0.3291, 'durability': -0.3291}",,-0.3291,,,-0.3291,-0.3291,True,Duplicate Review Text
+R00204,P0058,American Tourister,5.0,Good product. wheels glide easily. Also long lasting.,2023-07-11,True,0.6486,"{'wheels': 0.34, 'durability': 0.0}",0.34,,,,,0.0,False,
+R00205,P0049,American Tourister,3.0,"Average bag. spacious, but handle jammed.",2023-12-06,False,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00206,P0054,American Tourister,3.0,"Average bag. good capacity, but handle jammed.",2023-05-25,True,0.2382,"{'handle': 0.2382, 'size': 0.2382}",,0.2382,,,0.2382,,True,Duplicate Review Text
+R00207,P0057,American Tourister,5.0,Good product. zipper works fine. Also comfortable grip.,2023-04-04,True,0.7906,"{'handle': 0.5106, 'zipper': 0.2023}",,0.5106,,0.2023,,,True,Duplicate Review Text
+R00208,P0059,American Tourister,5.0,Good product. wheels glide easily. Also good capacity.,2023-02-26,True,0.802,"{'wheels': 0.34, 'size': 0.4404}",0.34,,,,0.4404,,True,Duplicate Review Text
+R00209,P0056,American Tourister,4.0,Good product. scratch resistant. Also 360 degree wheels are great.,2023-03-23,True,0.7906,"{'wheels': 0.6249, 'material': 0.0}",0.6249,,0.0,,,,False,
+R00210,P0058,American Tourister,5.0,Good product. looks premium. Also very durable.,2023-04-26,True,0.4404,{'durability': 0.0},,,,,,0.0,False,
+R00211,P0049,American Tourister,4.0,Good product. zipper works fine. Also 360 degree wheels are great.,2023-08-26,True,0.8316,"{'wheels': 0.6249, 'zipper': 0.2023}",0.6249,,,0.2023,,,False,
+R00212,P0055,American Tourister,3.0,"Average bag. spacious, but handle jammed.",2023-05-13,False,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00213,P0054,American Tourister,4.0,Good product. smooth zipper. Also perfect cabin size.,2023-06-21,True,0.765,"{'zipper': 0.0, 'size': 0.5719}",,,,0.0,0.5719,,False,
+R00214,P0053,American Tourister,3.0,"Average bag. good capacity, but wobbly handle.",2023-03-27,True,0.2382,"{'handle': 0.2382, 'size': 0.2382}",,0.2382,,,0.2382,,True,Duplicate Review Text
+R00215,P0058,American Tourister,5.0,Good product. sturdy handle. Also spacious.,2023-09-05,True,0.4404,"{'handle': 0.0, 'size': 0.0, 'durability': 0.0}",,0.0,,,0.0,0.0,False,
+R00216,P0048,American Tourister,4.0,Good product. telescopic handle is good. Also zipper works fine.,2023-09-10,True,0.765,"{'handle': 0.4404, 'zipper': 0.2023}",,0.4404,,0.2023,,,True,Duplicate Review Text
+R00217,P0050,American Tourister,3.0,"Average bag. perfect cabin size, but wobbly handle.",2023-03-21,True,0.3291,"{'handle': 0.3291, 'size': 0.3291}",,0.3291,,,0.3291,,True,Duplicate Review Text
+R00218,P0055,American Tourister,4.0,Good product. perfect cabin size. Also wheels glide easily.,2023-03-22,True,0.8402,"{'wheels': 0.34, 'size': 0.5719}",0.34,,,,0.5719,,False,
+R00219,P0059,American Tourister,4.0,Good product. spacious. Also smooth wheels.,2023-01-21,True,0.4404,"{'wheels': 0.0, 'size': 0.0}",0.0,,,,0.0,,False,
+R00220,P0056,American Tourister,3.0,"Average bag. perfect cabin size, but handle broke.",2023-10-21,True,-0.3291,"{'handle': -0.3291, 'size': -0.3291, 'durability': -0.3291}",,-0.3291,,,-0.3291,-0.3291,True,Duplicate Review Text
+R00221,P0053,American Tourister,3.0,"Average bag. fits a lot, but wobbly handle.",2023-08-08,False,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00222,P0050,American Tourister,4.0,Good product. smooth zipper. Also wheels glide easily.,2023-08-14,False,0.6486,"{'wheels': 0.34, 'zipper': 0.0}",0.34,,,0.0,,,False,
+R00223,P0053,American Tourister,4.0,Good product. telescopic handle is good. Also zipper works fine.,2023-12-11,True,0.765,"{'handle': 0.4404, 'zipper': 0.2023}",,0.4404,,0.2023,,,True,Duplicate Review Text
+R00224,P0052,American Tourister,3.0,"Average bag. perfect cabin size, but wobbly handle.",2023-09-18,True,0.3291,"{'handle': 0.3291, 'size': 0.3291}",,0.3291,,,0.3291,,True,Duplicate Review Text
+R00225,P0051,American Tourister,3.0,"Average bag. perfect cabin size, but handle broke.",2023-02-09,False,-0.3291,"{'handle': -0.3291, 'size': -0.3291, 'durability': -0.3291}",,-0.3291,,,-0.3291,-0.3291,True,Duplicate Review Text
+R00226,P0049,American Tourister,4.0,Good product. sturdy handle. Also 360 degree wheels are great.,2023-07-28,False,0.7906,"{'wheels': 0.6249, 'handle': 0.0, 'durability': 0.0}",0.6249,0.0,,,,0.0,False,
+R00227,P0049,American Tourister,3.0,"Average bag. perfect cabin size, but wobbly handle.",2023-10-24,True,0.3291,"{'handle': 0.3291, 'size': 0.3291}",,0.3291,,,0.3291,,True,Duplicate Review Text
+R00228,P0049,American Tourister,3.0,"Average bag. perfect cabin size, but handle broke.",2023-09-15,False,-0.3291,"{'handle': -0.3291, 'size': -0.3291, 'durability': -0.3291}",,-0.3291,,,-0.3291,-0.3291,True,Duplicate Review Text
+R00229,P0060,American Tourister,3.0,"Average bag. fits a lot, but handle broke.",2023-01-03,False,-0.5719,"{'handle': -0.5719, 'size': -0.5719, 'durability': -0.5719}",,-0.5719,,,-0.5719,-0.5719,True,Duplicate Review Text
+R00230,P0054,American Tourister,4.0,Good product. heavy duty zips. Also handle feels strong.,2023-01-02,True,0.7351,"{'handle': 0.5106, 'zipper': 0.0}",,0.5106,,0.0,,,False,
+R00231,P0053,American Tourister,4.0,Good product. fits a lot. Also smooth zipper.,2023-02-14,True,0.4404,"{'zipper': 0.0, 'size': 0.0}",,,,0.0,0.0,,False,
+R00232,P0060,American Tourister,5.0,Good product. hard shell is good. Also zipper works fine.,2023-01-13,True,0.7351,"{'material': 0.3612, 'zipper': 0.2023}",,,0.3612,0.2023,,,False,
+R00233,P0055,American Tourister,5.0,Good product. fits a lot. Also handle feels strong.,2023-02-13,False,0.7351,"{'handle': 0.5106, 'size': 0.0}",,0.5106,,,0.0,,False,
+R00234,P0058,American Tourister,4.0,Good product. spacious. Also looks premium.,2023-02-13,True,0.4404,{'size': 0.0},,,,,0.0,,True,Duplicate Review Text
+R00235,P0058,American Tourister,4.0,Good product. scratch resistant. Also survived flight drops.,2023-04-20,False,0.7351,{'material': 0.0},,,0.0,,,,False,
+R00236,P0054,American Tourister,3.0,"Average bag. spacious, but handle jammed.",2023-01-05,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00237,P0058,American Tourister,4.0,Good product. secure lock and zips. Also survived flight drops.,2023-10-17,True,0.8225,{'zipper': 0.34},,,,0.34,,,True,Duplicate Review Text
+R00238,P0051,American Tourister,3.0,"Average bag. fits a lot, but flimsy handle.",2023-07-20,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00239,P0055,American Tourister,4.0,Good product. hard shell is good. Also long lasting.,2023-08-27,True,0.6597,"{'material': 0.3612, 'durability': 0.0}",,,0.3612,,,0.0,True,Duplicate Review Text
+R00240,P0051,American Tourister,3.0,"Average bag. fits a lot, but handle jammed.",2023-07-19,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,False,
+R00241,P0058,American Tourister,4.0,Good product. sturdy build. Also 360 degree wheels are great.,2023-11-26,True,0.7906,"{'wheels': 0.6249, 'durability': 0.0}",0.6249,,,,,0.0,True,Duplicate Review Text
+R00242,P0057,American Tourister,5.0,Good product. roller is excellent. Also survived flight drops.,2023-09-21,False,0.872,{'wheels': 0.5719},0.5719,,,,,,False,
+R00243,P0048,American Tourister,4.0,Good product. very durable. Also sturdy handle.,2023-04-01,False,0.4404,"{'handle': 0.0, 'durability': 0.0}",,0.0,,,,0.0,False,
+R00244,P0051,American Tourister,4.0,Good product. secure lock and zips. Also telescopic handle is good.,2023-07-17,False,0.802,"{'handle': 0.4404, 'zipper': 0.34}",,0.4404,,0.34,,,True,Duplicate Review Text
+R00245,P0059,American Tourister,5.0,Good product. survived flight drops. Also wheels glide easily.,2023-09-11,False,0.8225,{'wheels': 0.34},0.34,,,,,,True,Duplicate Review Text
+R00246,P0054,American Tourister,4.0,Good product. heavy duty zips. Also hard shell is good.,2023-09-11,True,0.6597,"{'material': 0.3612, 'zipper': 0.0}",,,0.3612,0.0,,,True,Duplicate Review Text
+R00247,P0056,American Tourister,4.0,Good product. sturdy build. Also looks premium.,2023-04-09,True,0.4404,{'durability': 0.0},,,,,,0.0,False,
+R00248,P0049,American Tourister,4.0,Good product. looks premium. Also secure lock and zips.,2023-06-16,True,0.6486,{'zipper': 0.34},,,,0.34,,,False,
+R00249,P0054,American Tourister,4.0,Good product. long lasting. Also tough material.,2023-10-22,False,0.34,"{'material': -0.128, 'durability': -0.064}",,,-0.128,,,-0.064,False,
+R00250,P0060,American Tourister,3.0,"Average bag. good capacity, but wobbly handle.",2023-03-10,True,0.2382,"{'handle': 0.2382, 'size': 0.2382}",,0.2382,,,0.2382,,True,Duplicate Review Text
+R00251,P0050,American Tourister,4.0,Good product. long lasting. Also roller is excellent.,2023-11-09,False,0.765,"{'wheels': 0.5719, 'durability': 0.0}",0.5719,,,,,0.0,False,
+R00252,P0049,American Tourister,4.0,Good product. handle feels strong. Also long lasting.,2023-03-04,True,0.7351,"{'handle': 0.5106, 'durability': 0.0}",,0.5106,,,,0.0,False,
+R00253,P0049,American Tourister,5.0,Good product. wheels glide easily. Also survived flight drops.,2023-01-04,False,0.8225,{'wheels': 0.34},0.34,,,,,,False,
+R00254,P0051,American Tourister,5.0,Good product. very durable. Also heavy duty zips.,2023-01-18,True,0.4404,"{'zipper': 0.0, 'durability': 0.0}",,,,0.0,,0.0,False,
+R00255,P0052,American Tourister,5.0,Good product. sturdy build. Also heavy duty zips.,2023-05-11,True,0.4404,"{'zipper': 0.0, 'durability': 0.0}",,,,0.0,,0.0,True,Duplicate Review Text
+R00256,P0056,American Tourister,3.0,"Average bag. spacious, but handle jammed.",2023-11-19,True,0.0,"{'handle': 0.0, 'size': 0.0}",,0.0,,,0.0,,True,Duplicate Review Text
+R00257,P0054,American Tourister,5.0,Good product. survived flight drops. Also roller is excellent.,2023-03-02,False,0.872,{'wheels': 0.5719},0.5719,,,,,,False,
+R00258,P0058,American Tourister,4.0,Good product. zipper works fine. Also sturdy handle.,2023-01-10,True,0.5719,"{'handle': 0.0, 'zipper': 0.2023, 'durability': 0.0}",,0.0,,0.2023,,0.0,False,
+R00259,P0060,American Tourister,5.0,Good product. hard shell is good. Also secure lock and zips.,2023-03-28,False,0.7783,"{'material': 0.3612, 'zipper': 0.34}",,,0.3612,0.34,,,False,
+R00260,P0050,American Tourister,3.0,"Average bag. perfect cabin size, but handle jammed.",2023-06-06,False,0.3291,"{'handle': 0.3291, 'size': 0.3291}",,0.3291,,,0.3291,,True,Duplicate Review Text
