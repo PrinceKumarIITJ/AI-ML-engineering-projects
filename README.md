@@ -1,17 +1,17 @@
-# 🚀 Event Lead Intelligence Scraper
+# Event Lead Intelligence Scraper
 
 An AI-powered, industrial-grade data mining platform designed to extract, clean, and enrich high-quality business leads for the event management and wedding industry across 9 major Indian cities.
 
 This system transforms noisy web data into a refined, deduplicated directory of verified business entities, far exceeding the initial 5,000-lead target by mining **31,500+ raw records**.
 
-## 🌟 Performance Milestones
+## Performance Milestones
 - **Mining Job Status**: COMPLETED
 - **Total Raw Leads**: 31,508
 - **Unique Business Entities**: 24,597 (Post-Deduplication)
 - **Top Quality Deliverable**: 5,000 Premium leads (Sorted by rating/verification).
 - **City Coverage**: Jaipur, Delhi, Indore, Gurgaon, Noida, Chandigarh, Jodhpur, Bhopal, Udaipur.
 
-## 🛠️ Intelligence Stack
+## Intelligence Stack
 
 ### 1. Multi-Source Scraping Engine
 Robust scraping pipelines for **Google Maps, WedMeGood, WeddingWire India,** and **IndiaMART**.
@@ -26,11 +26,11 @@ Robust scraping pipelines for **Google Maps, WedMeGood, WeddingWire India,** and
 - **Parallel Enrichment**: High-speed web discovery using `ThreadPoolExecutor` to verify social media digital footprints (Instagram, Facebook, LinkedIn).
 - **Quality Ranking**: A tiered sorting algorithm that prioritizes verified businesses with high ratings and complete contact information.
 
-## 📊 Final Deliverable
+## Final Deliverable
 The output is generated as an optimized Excel Master Database with city-wise tabs and a summary dashboard.
 - **Location**: `outputs/Wedding_Event_Companies_Master.xlsx`
 
-## 📁 Repository Structure
+## Repository Structure
 ```bash
 ├── data/           # Persistent SQLite storage for mined leads
 ├── models/         # AI logic (Relevance, Deduplication, Schema)
@@ -39,7 +39,7 @@ The output is generated as an optimized Excel Master Database with city-wise tab
 └── main.py         # Primary orchestration entry point
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.10+
