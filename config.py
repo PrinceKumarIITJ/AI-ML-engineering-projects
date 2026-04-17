@@ -46,12 +46,12 @@ USER_AGENTS = [
 
 # Duplication Weights
 DEDUPE_THRESHOLDS = {
-    "NAME_SIMILARITY": 0.35,
+    "NAME_SIMILARITY": 0.50,
     "PHONE_EXACT": 0.25,
     "WEBSITE_EXACT": 0.15,
-    "ADDRESS_SIMILARITY": 0.15,
+    "ADDRESS_SIMILARITY": 0.10,
     "SOCIAL_EXACT": 0.10,
-    "MATCH_CONFIDENCE_MIN": 0.80
+    "MATCH_CONFIDENCE_MIN": 0.60
 }
 
 # Relevance Classification Model (Local)

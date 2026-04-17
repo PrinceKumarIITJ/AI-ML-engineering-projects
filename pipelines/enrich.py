@@ -33,8 +33,8 @@ class DataEnricher:
             pass
         return None
 
-    def _extract_socials_from_website(self, url: str) -> dict:
-        """Fetches the official website HTML and looks for social media links."""
+    def _extract_details_from_website(self, url: str) -> dict:
+        """Fetches the official website HTML and looks for social media links and phone numbers."""
         if not url:
             return {}
             
@@ -47,16 +47,27 @@ class DataEnricher:
             
         try:
             soup = BeautifulSoup(response.text, 'html.parser')
-            socials = {}
+            results = {}
+            
+            # 1. Socials
             for a in soup.find_all('a', href=True):
                 href = a['href'].lower()
-                if 'instagram.com/' in href and 'instagram_url' not in socials:
-                    socials['instagram_url'] = a['href']
-                elif 'facebook.com/' in href and 'facebook_url' not in socials:
-                    socials['facebook_url'] = a['href']
-                elif 'linkedin.com/company/' in href and 'linkedin_url' not in socials:
-                    socials['linkedin_url'] = a['href']
-            return socials
+                if 'instagram.com/' in href and 'instagram_url' not in results:
+                    results['instagram_url'] = a['href']
+                elif 'facebook.com/' in href and 'facebook_url' not in results:
+                    results['facebook_url'] = a['href']
+                elif 'linkedin.com/company/' in href and 'linkedin_url' not in results:
+                    results['linkedin_url'] = a['href']
+            
+            # 2. Contact Numbers (Regex for Indian numbers)
+            text_content = soup.get_text()
+            phone_matches = re.findall(r'(?:\+91[\s-]?)?([6-9]\d{9})', text_content)
+            if phone_matches:
+                results['contact_number'] = phone_matches[0]
+                if len(phone_matches) > 1:
+                    results['alternate_number'] = phone_matches[1]
+
+            return results
         except Exception:
             return {}
 
@@ -92,15 +103,19 @@ class DataEnricher:
     def enrich_record(self, record: BusinessSchema) -> BusinessSchema:
         """Attempt to fill missing data without hallucination."""
         
-        # 1. Attempt to fetch socials from known website
-        if record.website and not (record.instagram_url and record.facebook_url):
-            found = self._extract_socials_from_website(record.website)
+        # 1. Attempt to fetch details from known website
+        if record.website and not (record.instagram_url and record.facebook_url and record.contact_number):
+            found = self._extract_details_from_website(record.website)
             if 'instagram_url' in found and not record.instagram_url:
                 record.instagram_url = found['instagram_url']
             if 'facebook_url' in found and not record.facebook_url:
                 record.facebook_url = found['facebook_url']
             if 'linkedin_url' in found and not record.linkedin_url:
                 record.linkedin_url = found['linkedin_url']
+            if 'contact_number' in found and not record.contact_number:
+                record.contact_number = found['contact_number']
+            if 'alternate_number' in found and not record.alternate_number:
+                record.alternate_number = found['alternate_number']
 
         # 2. Attempt search engine discovery if heavily missing
         elif not record.website and not record.instagram_url:
@@ -117,9 +132,14 @@ class DataEnricher:
         return record
 
     def run_pipeline(self, records: List[BusinessSchema]) -> List[BusinessSchema]:
-        enriched = []
-        for i, r in enumerate(records):
-            if i > 0 and i % 50 == 0:
-                logger.info(f"Enriched {i}/{len(records)} records...")
-            enriched.append(self.enrich_record(r))
+        from concurrent.futures import ThreadPoolExecutor
+        
+        total = len(records)
+        logger.info(f"Starting parallel enrichment for {total} records...")
+        
+        # Use 10 threads for I/O bound enrichment
+        with ThreadPoolExecutor(max_workers=10) as executor:
+            enriched = list(executor.map(self.enrich_record, records))
+            
+        logger.info(f"Parallel enrichment complete for {total} records.")
         return enriched

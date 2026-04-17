@@ -23,11 +23,25 @@ class WedMeGoodScraper(BaseScraper):
         self.platform_name = "WedMeGood"
 
     def _build_url(self, city: str, page_num: int = 1) -> str:
-        city_slug = city.lower().replace(" ", "-")
-        # WedMeGood URL pattern
-        base = f"https://www.wedmegood.com/vendors/all/wedding-planners/{city_slug}/"
+        # WedMeGood has specific city segment patterns
+        city_slugs = {
+            "delhi": "delhi-ncr",
+            "mumbai": "mumbai",
+            "jaipur": "jaipur",
+            "indore": "indore",
+            "chandigarh": "chandigarh",
+            "udaipur": "udaipur",
+            "jodhpur": "jodhpur",
+            "gurgaon": "delhi-ncr",
+            "noida": "delhi-ncr",
+            "bhopal": "bhopal"
+        }
+        slug = city_slugs.get(city.lower(), city.lower().replace(" ", "-"))
+        
+        # New working URL pattern discovered via browser research
+        base = f"https://www.wedmegood.com/vendors/{slug}/wedding-planners"
         if page_num > 1:
-            base += f"?page={page_num}"
+            base += f"/?page={page_num}"
         return base
 
     def scrape(self, keyword: str, city: str, limit: int = 100) -> List[Dict[str, Any]]:
@@ -51,10 +65,9 @@ class WedMeGoodScraper(BaseScraper):
                     break
 
                 # Extract vendor cards
-                cards = page.query_selector_all('div.vendor-card, div.vendor_card, div[class*="vendorCard"], a[class*="vendor-tile"]')
+                cards = page.query_selector_all('div.vendor-card, [id*="vendor-card"]')
                 if not cards:
-                    # Try alternative selectors
-                    cards = page.query_selector_all('div.vendor-list-item, div[class*="VendorCard"]')
+                    cards = page.query_selector_all('div[data-testid="VendorCard"]')
 
                 if not cards:
                     logger.info(f"[{self.platform_name}] No cards on page {page_num}, ending.")
@@ -99,7 +112,7 @@ class WedMeGoodScraper(BaseScraper):
         }
 
         # Name
-        name_el = card.query_selector('h3, h2, a[class*="vendor-name"], div[class*="name"], span[class*="name"]')
+        name_el = card.query_selector('h3, h2, a.vendor-detail, [class*="vendorName"]')
         if name_el:
             data['business_name'] = name_el.inner_text().strip()
 
@@ -112,7 +125,7 @@ class WedMeGoodScraper(BaseScraper):
             data['source_urls'] = [href]
 
         # Rating
-        rating_el = card.query_selector('span[class*="rating"], div[class*="rating"]')
+        rating_el = card.query_selector('span.rating-count, [class*="rating"]')
         if rating_el:
             text = rating_el.inner_text().strip()
             try:
@@ -121,7 +134,7 @@ class WedMeGoodScraper(BaseScraper):
                 pass
 
         # Reviews
-        review_el = card.query_selector('span[class*="review"], div[class*="review"]')
+        review_el = card.query_selector('span.review-count, [class*="review"]')
         if review_el:
             text = review_el.inner_text().strip()
             try:
@@ -129,13 +142,8 @@ class WedMeGoodScraper(BaseScraper):
             except Exception:
                 pass
 
-        # Price
-        price_el = card.query_selector('span[class*="price"], div[class*="price"]')
-        if price_el:
-            data['price_range'] = price_el.inner_text().strip()
-
-        # Location detail
-        loc_el = card.query_selector('span[class*="location"], div[class*="location"], span[class*="city"]')
+        # Location
+        loc_el = card.query_selector('p.city, [class*="location"]')
         if loc_el:
             data['full_address'] = loc_el.inner_text().strip()
 
@@ -181,9 +189,9 @@ class WeddingWireScraper(BaseScraper):
                     break
 
                 # Vendor cards
-                cards = page.query_selector_all('div.app-search-card, div[class*="StoreFrontCard"], div[class*="vendor-card"]')
+                cards = page.query_selector_all('div.vendorTile, div[class*="vendorTile"], article[class*="vendorTile"]')
                 if not cards:
-                    cards = page.query_selector_all('article, div.storefronts-card')
+                    cards = page.query_selector_all('div[id*="vendor-tile"], article')
 
                 if not cards:
                     logger.info(f"[{self.platform_name}] No cards on page {page_num}")
@@ -223,7 +231,7 @@ class WeddingWireScraper(BaseScraper):
         }
 
         # Name
-        name_el = card.query_selector('a.app-search-card__title, h2, h3, a[class*="title"], span[class*="name"]')
+        name_el = card.query_selector('.vendorTile__title, a.vendorTile__title, [class*="title"]')
         if name_el:
             data['business_name'] = name_el.inner_text().strip()
             href = name_el.get_attribute('href')
@@ -314,10 +322,9 @@ class JustDialScraper(BaseScraper):
                 self.human_scroll(page, 5)
 
                 # Extract listing cards
-                cards = page.query_selector_all('li.cntanr, div[class*="resultbox"], div.store-details, li[class*="cntanr"]')
+                cards = page.query_selector_all('div.resultbox, div.resultbox_info, [class*="resultbox"]')
                 if not cards:
-                    # Updated selectors for newer JD layout
-                    cards = page.query_selector_all('div[class*="resultbox_info"], div[class*="jsx-"]')
+                    cards = page.query_selector_all('div[id*="resultbox"]')
 
                 if not cards:
                     logger.info(f"[{self.platform_name}] No cards on page {page_num}")
@@ -461,9 +468,9 @@ class IndiaMartScraper(BaseScraper):
                 self.human_scroll(page, 4)
 
                 # Extract listings
-                cards = page.query_selector_all('div.lst, div[class*="cardwrap"], div[class*="flx-bx"]')
+                cards = page.query_selector_all('div.card, [id*="LST"], div.lst, [class*="lst"]')
                 if not cards:
-                    cards = page.query_selector_all('div[class*="product-card"], div.prd-card')
+                    cards = page.query_selector_all('div[data-testid*="card"], div.brs5')
 
                 if not cards:
                     logger.info(f"[{self.platform_name}] No cards on page {page_num}")
@@ -502,7 +509,7 @@ class IndiaMartScraper(BaseScraper):
         }
 
         # Company Name
-        name_el = card.query_selector('a.lcname, a[class*="company-name"], h2 a, h3 a, span.company-name')
+        name_el = card.query_selector('.companyname a.cardlinks, a.cardlinks, a[class*="company-name"]')
         if name_el:
             data['business_name'] = name_el.inner_text().strip()
             href = name_el.get_attribute('href')
@@ -554,11 +561,11 @@ class GoogleSearchScraper(BaseScraper):
         results = []
 
         queries = [
-            f'{keyword} in {city} contact number',
-            f'best {keyword} {city}',
-            f'top {keyword} {city} list',
-            f'site:facebook.com {keyword} {city}',
-            f'site:instagram.com {keyword} {city}',
+            f'site:facebook.com "{keyword}" "{city}"',
+            f'site:instagram.com "{keyword}" "{city}"',
+            f'site:linkedin.com/company "{keyword}" "{city}"',
+            f'"{keyword}" "{city}" contact details',
+            f'"{keyword}" "{city}" email address',
         ]
 
         try:

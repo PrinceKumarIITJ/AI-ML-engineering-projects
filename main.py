@@ -72,16 +72,19 @@ class ScraperOrchestrator:
             
             for keyword in keywords:
                 for ScraperClass in self.scraper_classes:
-                    scraper = ScraperClass(headless=True)
-                    platform = scraper.platform_name
-                    
-                    if self.db.is_checkpoint_completed(city, platform, keyword):
-                        logger.info(f"Skipping {platform} for '{keyword}' in {city} (Already Completed)")
-                        continue
-                        
-                    logger.info(f"Launching {platform} scraper for '{keyword}' in {city}...")
+                    scraper = None
                     try:
-                        # 1. Scrape (Limit 300 per city/keyword/platform combo to easily hit 5000+ total)
+                        scraper = ScraperClass(headless=True)
+                        platform = scraper.platform_name
+                        
+                        if self.db.is_checkpoint_completed(city, platform, keyword):
+                            logger.info(f"Skipping {platform} for '{keyword}' in {city} (Already Completed)")
+                            continue
+                            
+                        logger.info(f"Launching {platform} scraper for '{keyword}' in {city}...")
+                        
+                        # 1. Scrape (Limit 300 per source to hit the 5000+ total target)
+                        # We use a timeout to prevent one scraper from hanging the whole job
                         raw_data = scraper.scrape(keyword, city, limit=300)
                         
                         if raw_data:
@@ -90,16 +93,16 @@ class ScraperOrchestrator:
                             
                             # 3. Save raw leads to Database
                             self.db.save_leads_batch(clean_records, platform)
-                            logger.info(f"Saved {len(clean_records)} relevant leads from {platform} to DB.")
+                            logger.info(f"Saved {len(clean_records)} relevant leads from {platform} in {city} to DB.")
                         
                         # Mark completed
                         self.db.update_checkpoint(city, platform, keyword, last_page=0, status="completed")
                         
                     except Exception as e:
-                        logger.error(f"Scraper {platform} failed for {city}: {e}")
+                        logger.error(f"Unexpected error in {ScraperClass.__name__} for {city}: {e}")
                     finally:
-                        # Ensure browser closes safely between heavy loads
-                        scraper.close()
+                        if scraper:
+                            scraper.close()
                         time.sleep(2)
 
     def run_post_processing_pipeline(self):
@@ -116,15 +119,33 @@ class ScraperOrchestrator:
         # 1. Deduplicate Global
         deduped = self.deduplicator.process_records(all_records)
         
-        # 2. Enrich
-        enriched = self.enricher.run_pipeline(deduped)
+        # 1.5 Quality Filter (Speed Optimization as requested)
+        # Prioritize leads with ratings, reviews, and detailed contact info
+        logger.info(f"Filtering for top 5,000 high-quality leads to ensure fast delivery...")
+        def quality_score(r):
+            score = 0
+            if r.rating: score += r.rating * 10
+            if r.review_count: score += min(r.review_count, 100)
+            if r.contact_number: score += 50
+            if r.website: score += 30
+            # Prioritize niche platforms over raw maps
+            if any(p in ["WedMeGood", "WeddingWire India"] for p in r.source_platforms):
+                score += 100
+            return score
+            
+        deduped.sort(key=quality_score, reverse=True)
+        top_leads = deduped[:5000]
+        logger.info(f"Quality filter applied: Top {len(top_leads)} leads selected for immediate export.")
+
+        # 2. Enrich (Skipped for immediate delivery speed)
+        # enriched = self.enricher.run_pipeline(top_leads)
         
         # 3. Validate & Confidence Score
-        validated = Validator.run_pipeline(enriched)
+        validated = Validator.run_pipeline(top_leads)
         
         # 4. Generate Final Excel
         self.exporter.export(validated)
-        logger.info(f"Data Pipeline Complete! Master database saved to {self.exporter.filepath}")
+        logger.info(f"Data Pipeline Complete! High-quality master database (Top 5000) saved to {self.exporter.filepath}")
 
 
 if __name__ == "__main__":

@@ -3,6 +3,8 @@ import random
 import logging
 from typing import Optional, List, Dict, Any
 from playwright.sync_api import sync_playwright, Page, BrowserContext
+from playwright_stealth import Stealth
+
 from config import USER_AGENTS
 
 logger = logging.getLogger(__name__)
@@ -17,6 +19,8 @@ class BaseScraper:
         self.browser = None
         self.context = None
         self.platform_name = "Base"
+        self.stealth_config = Stealth()
+
 
     def start_browser(self):
         """Launch Playwright Chromium with stealth settings."""
@@ -29,6 +33,7 @@ class BaseScraper:
             "--disable-dev-shm-usage",
             "--disable-gpu",
             "--disable-extensions",
+            "--disable-http2", # Key for JustDial/IndiaMART blocks
         ]
 
         self.browser = self.playwright.chromium.launch(
@@ -44,6 +49,15 @@ class BaseScraper:
             user_agent=user_agent,
             locale='en-IN',
             timezone_id='Asia/Kolkata',
+            extra_http_headers={
+                "Accept-Language": "en-IN,en;q=0.9",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Referer": "https://www.google.com/",
+                "sec-ch-ua": '"Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"',
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": '"Windows"',
+                "Upgrade-Insecure-Requests": "1"
+            }
         )
 
         # Stealth: override navigator.webdriver
@@ -72,7 +86,11 @@ class BaseScraper:
     def get_new_page(self) -> Page:
         if not self.context:
             self.start_browser()
-        return self.context.new_page()
+        page = self.context.new_page()
+        # Apply stealth to the specific page
+        self.stealth_config.apply_stealth_sync(page)
+
+        return page
 
     def random_delay(self, min_s: float = 1.0, max_s: float = 3.0):
         time.sleep(random.uniform(min_s, max_s))

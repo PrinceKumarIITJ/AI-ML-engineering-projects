@@ -1,0 +1,35 @@
+# Python files
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+bin/
+lib/
+include/
+
+# IDE files
+.vscode/
+.idea/
+
+# Database files
+data/leads.sqlite
+data/*.db
+
+# Logs & temporary files
+*.log
+scratch/
+debug_*.py
+*gather.py
+out.txt
+
+# Artifacts & Outputs
+# We SPECIFICALLY ALLOW the final master database as requested
+!outputs/Wedding_Event_Companies_Master.xlsx
+!outputs/Sample_Intelligence.xlsx
+
+# But we ignore other temporary outputs
+outputs/*.xlsx
+!outputs/Wedding_Event_Companies_Master.xlsx
+!outputs/Sample_Intelligence.xlsx
