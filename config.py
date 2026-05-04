@@ -1,3 +1,9 @@
+"""
+The Rulebook (Configuration).
+This file contains all the central settings for the project. 
+If you want to search a new city, change a keyword, or adjust 
+how strictly the AI matches duplicates, you change it here.
+"""
 import os
 from pathlib import Path
 

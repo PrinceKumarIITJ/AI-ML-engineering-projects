@@ -1,3 +1,10 @@
+"""
+The Quality Assurance Agent (Validator).
+This script checks the work of the other agents. It looks at phone numbers, 
+emails, and websites to make sure they aren't fake or misspelled. 
+If it finds a 5-digit phone number, it deletes it. It also grades the lead 
+giving it a "Verified", "Enriched", or "Raw" score based on how much good data it has.
+"""
 import re
 import logging
 from typing import List
@@ -8,6 +15,7 @@ logger = logging.getLogger(__name__)
 class Validator:
     @staticmethod
     def validate_email(email: str) -> bool:
+        """Checks if an email has an '@' and a domain (like .com)."""
         if not email: return False
         pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
         return bool(re.match(pattern, email))

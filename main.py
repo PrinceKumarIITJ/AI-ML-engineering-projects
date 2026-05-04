@@ -30,6 +30,13 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class ScraperOrchestrator:
+    """
+    The main 'Manager' class for the IntelliLead project.
+    This class controls the entire workflow: 
+    1. Directing the scrapers (bots) to gather data.
+    2. Sending raw data through the AI filters (Normalizer & Classifier).
+    3. Merging duplicates and exporting the final report.
+    """
     def __init__(self):
         self.db = DatabaseManager(DB_PATH)
         self.classifier = RelevanceClassifier()
@@ -49,7 +56,11 @@ class ScraperOrchestrator:
         ]
 
     def _process_raw_batch(self, raw_data_list: List[Dict[str, Any]]) -> List[Any]:
-        """Passes a scraped batch through the NLP and Validation pipeline."""
+        """
+        Takes a list of messy, raw data straight from a website and cleans it.
+        It standardizes the format (Normalization) and then asks the AI 
+        (RelevanceClassifier) to throw out any junk leads (like hotels or caterers).
+        """
         processed = []
         for raw_dict in raw_data_list:
             try:
@@ -65,6 +76,12 @@ class ScraperOrchestrator:
         return self.classifier.classify_batch(processed)
 
     def run_mining_job(self, cities: List[str] = TARGET_CITIES, keywords: List[str] = TARGET_KEYWORDS):
+        """
+        The core Data Gathering loop. 
+        It goes through every city (e.g., Jaipur) and every keyword (e.g., 'Wedding Planners').
+        For each combination, it sends out all available scraper bots (Google Maps, JustDial, etc.)
+        to collect data, verify it, and save it to the database.
+        """
         logger.info(f"Starting Multi-Platform Mining Job for {len(cities)} cities and {len(keywords)} keywords...")
         
         for city in cities:
@@ -106,7 +123,12 @@ class ScraperOrchestrator:
                         time.sleep(2)
 
     def run_post_processing_pipeline(self):
-        """Runs deduplication, enrichment, and validation on all database records."""
+        """
+        The 'Refinement' stage. 
+        After data is gathered in the database, this function loads it all,
+        finds duplicates (businesses that exist on multiple websites), merges them,
+        checks if the contact info is valid, and generates the final Excel report.
+        """
         logger.info(f"\n{'='*50}\nStarting Post-Processing Intelligence Pipeline\n{'='*50}")
         
         all_records = self.db.load_all_leads()

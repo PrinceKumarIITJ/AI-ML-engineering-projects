@@ -1,3 +1,10 @@
+"""
+The Deduplication Pipeline (Smart Merging).
+This script takes the logic from 'duplicate_matcher.py' and actually applies it 
+to all the leads in our database. It groups similar leads into clusters, 
+picks the best pieces of data from each lead in the cluster, and merges them 
+into one super-lead.
+"""
 import logging
 from typing import List
 from models.schema import BusinessSchema
@@ -11,8 +18,8 @@ class Deduplicator:
 
     def process_records(self, records: List[BusinessSchema]) -> List[BusinessSchema]:
         """
-        Takes a raw list of BusinessSchemas, groups duplicates, and merges each cluster
-        into a single consolidated record.
+        Takes a raw list of leads (where the same business might appear 3 times).
+        It groups those 3 copies together, and merges them into 1 final, complete lead.
         """
         clusters = self.matcher.find_duplicates(records)
         deduped_records = []

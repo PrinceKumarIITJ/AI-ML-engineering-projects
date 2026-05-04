@@ -1,3 +1,10 @@
+"""
+The Stealth Engine (Base Scraper).
+When our agent visits websites like JustDial, those websites try to block 
+automated bots. This script is the "disguise". It tricks the websites into 
+thinking our agent is a real human using a normal Google Chrome browser 
+on a Windows computer.
+"""
 import time
 import random
 import logging
@@ -11,7 +18,11 @@ logger = logging.getLogger(__name__)
 
 
 class BaseScraper:
-    """Base class for all Playwright-based scrapers with anti-detection and stealth."""
+    """
+    The parent class for all our web scrapers. 
+    It handles launching the browser, applying the stealth disguise, 
+    and scrolling down the page just like a human would.
+    """
 
     def __init__(self, headless: bool = True):
         self.headless = headless

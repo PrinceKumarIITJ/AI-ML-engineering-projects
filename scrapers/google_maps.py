@@ -1,6 +1,9 @@
 """
-Google Maps Scraper — uses Playwright to scroll through Google Maps search results
-and extract business details from each listing's side panel.
+The Google Maps Agent.
+This script automatically opens Google Maps, types in a search query (like 
+"Wedding Planners in Jaipur"), and scrolls down the list of results. 
+For every business it finds, it clicks on it and extracts the name, address, 
+phone number, and star rating.
 """
 from typing import List, Dict, Any
 from .base_scraper import BaseScraper

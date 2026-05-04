@@ -1,3 +1,10 @@
+"""
+The Report Generator (Excel Exporter).
+This script takes the final, perfect data and creates a beautiful Excel file.
+It automatically creates a separate tab for each city (e.g., one tab for Jaipur, 
+one for Delhi), freezes the top row, makes the header blue, and auto-sizes 
+the columns so it's instantly ready to be emailed to the sales team.
+"""
 import pandas as pd
 import logging
 from openpyxl import load_workbook

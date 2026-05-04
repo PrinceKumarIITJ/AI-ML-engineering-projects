@@ -1,9 +1,18 @@
+"""
+The Data Blueprint.
+This file defines exactly what a "Business Lead" looks like in our system.
+No matter if the data came from Google or JustDial, it must be forced into
+this specific format so we have clean, uniform columns in our final Excel sheet.
+"""
 from pydantic import BaseModel, Field
 from typing import Optional, List
 from datetime import datetime
 
 class BusinessSchema(BaseModel):
-    """Unified schema for every business record regardless of source platform."""
+    """
+    The master template for a lead. 
+    It forces all websites to use the same field names (like 'contact_number').
+    """
 
     # Core Identity
     business_name: str

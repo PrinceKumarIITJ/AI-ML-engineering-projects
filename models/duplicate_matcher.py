@@ -1,6 +1,10 @@
 """
-Duplicate Matcher — weighted multi-field similarity scoring to detect
-and cluster duplicate business records across different source platforms.
+The Deduplication Engine.
+This script solves a major business problem: if 'ABC Events' is on Google Maps
+and 'ABC Event Planners' is on JustDial, are they the same company?
+This code uses "Fuzzy Logic" (like a human's common sense) to compare names, 
+phone numbers, and addresses. If the similarity score is high enough, it merges 
+them so the sales team doesn't call the same person twice.
 """
 from typing import List
 from rapidfuzz import fuzz
@@ -13,6 +17,7 @@ logger = logging.getLogger(__name__)
 
 
 class DuplicateMatcher:
+    """Calculates similarity scores and groups matching businesses together."""
     def __init__(self):
         pass
 

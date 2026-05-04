@@ -1,3 +1,10 @@
+"""
+The Discovery Agent (Enricher).
+Sometimes we find a great business on Google Maps, but they don't list their 
+email or Instagram. This script acts like a private investigator. 
+It searches the broader internet (using DuckDuckGo) or visits the company's 
+official website to "hunt" for missing contact information and social media links.
+"""
 import time
 import requests
 import random
@@ -12,9 +19,8 @@ logger = logging.getLogger(__name__)
 
 class DataEnricher:
     """
-    Enriches business records by searching for missing fields (social links, website)
-    using public search engine queries (e.g., DuckDuckGo to avoid strict Google bans),
-    or extracting from their verified website.
+    Finds missing data (like Instagram links or Phone numbers) 
+    by automatically searching the web.
     """
     def __init__(self):
         self.session = requests.Session()

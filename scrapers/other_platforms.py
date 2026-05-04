@@ -1,6 +1,9 @@
 """
-Scrapers for WedMeGood, WeddingWire, JustDial, and IndiaMART.
-Each scraper uses Playwright to navigate the platform and extract business listings.
+The Niche Platform Agents.
+While Google Maps is great, a lot of highly relevant wedding planners are 
+only listed on specialized websites. These scripts are custom-built to navigate 
+WedMeGood, WeddingWire, JustDial, and IndiaMART, extract their data, and bypass 
+their security blocks.
 """
 from typing import List, Dict, Any, Optional
 from .base_scraper import BaseScraper

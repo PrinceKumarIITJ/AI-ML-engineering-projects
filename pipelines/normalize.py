@@ -1,3 +1,9 @@
+"""
+The Data Cleaner (Normalizer).
+Different websites provide data in different shapes (e.g., Google Maps might have 'Phone', 
+JustDial might have 'Mobile'). This script forces all data to wear the same "uniform" 
+so it fits perfectly into our database and Excel sheets.
+"""
 import logging
 from typing import Dict, Any
 from models.schema import BusinessSchema
@@ -8,7 +14,9 @@ class Normalizer:
     @staticmethod
     def normalize(data: Dict[str, Any]) -> BusinessSchema:
         """
-        Converts a raw dictionary scraped from various platforms into a standardized BusinessSchema.
+        Takes a messy dictionary of data and cleans it up.
+        It removes extra spaces, fills in blanks with 'Unknown', 
+        and ensures lists (like 'services_offered') don't have duplicates.
         """
         # Ensure mandatory fields are present
         if not data.get('business_name'):

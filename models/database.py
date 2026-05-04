@@ -1,3 +1,10 @@
+"""
+The Filing Cabinet (Database Manager).
+This file handles saving our leads securely to a local SQLite database.
+It also features a "Checkpointing" system. If the scraper crashes or the internet 
+disconnects, this system remembers exactly where it stopped so it doesn't 
+start from the beginning next time.
+"""
 import sqlite3
 import json
 from pathlib import Path
@@ -9,6 +16,9 @@ logger = logging.getLogger(__name__)
 
 
 class DatabaseManager:
+    """
+    Handles all reading and writing to the local 'leads.sqlite' file.
+    """
     def __init__(self, db_path: Path):
         self.db_path = db_path
         self._init_db()

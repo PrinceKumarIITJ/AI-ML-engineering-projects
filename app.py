@@ -1,3 +1,8 @@
+"""
+This file creates the visual Dashboard (User Interface) for the project.
+It uses a library called 'Streamlit' to turn data from our database 
+into a beautiful web page where managers can see live stats and download Excel reports.
+"""
 import streamlit as st
 import pandas as pd
 from pathlib import Path
@@ -79,43 +84,62 @@ try:
 except Exception as e:
     st.warning("Database not initialized or empty. Run the scraping pipeline first.")
 
+# Final Presentation & Reporting
 st.markdown("---")
+st.subheader("📑 Database & Reports")
 
-# Final Presentation
-excel_path = OUTPUT_DIR / "Wedding_Event_Companies_Master.xlsx"
+# 1. Intelligence Discovery Feed (Live DB)
+with st.expander("📡 Live Intelligence Discovery Feed", expanded=False):
+    st.write("Last 10 leads identified by the Agentic Pipeline:")
+    recent_leads = db.load_all_leads()[-10:] if total_raw > 0 else []
+    if recent_leads:
+        recent_df = pd.DataFrame([l.model_dump() for l in recent_leads])
+        st.table(recent_df[['business_name', 'city', 'category', 'rating']].tail(10))
+    else:
+        st.info("No live feeds available yet.")
 
-st.subheader("📑 Final Processed & Enriched Output")
-if excel_path.exists():
-    try:
-        xls = pd.ExcelFile(excel_path)
-        
-        # Action Bar
-        col_btn, col_sheet, _ = st.columns([1, 1, 2])
-        
-        with col_sheet:
-            sheet = st.selectbox("View Regional Database", xls.sheet_names)
+# 2. Multi-Report Comparative Viewer
+all_reports = list(OUTPUT_DIR.glob("*.xlsx"))
+if all_reports:
+    report_names = [f.name for f in all_reports]
+    master_file = "Wedding_Event_Companies_Master.xlsx"
+    demo_file = "Demo_Leads_Report.xlsx"
+    
+    # Create Tabs for different views
+    tab1, tab2 = st.tabs(["📊 Master Database (Historical)", "🧪 Quick Demo Results"])
+    
+    with tab1:
+        if master_file in report_names:
+            st.markdown(f"**Source:** `{master_file}`")
+            xls_m = pd.ExcelFile(OUTPUT_DIR / master_file)
+            s_m = st.selectbox("Sheet (Master)", xls_m.sheet_names, key="m_sheet")
+            df_m = pd.read_excel(OUTPUT_DIR / master_file, sheet_name=s_m)
             
-        with col_btn:
-            st.markdown("<br>", unsafe_allow_html=True)
-            with open(excel_path, "rb") as file:
-                btn = st.download_button(
-                        label="⬇️ Download Master Excel",
-                        data=file,
-                        file_name="Wedding_Event_Companies_Master.xlsx",
-                        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-                    )
-        
-        df = pd.read_excel(excel_path, sheet_name=sheet)
-        
-        # Display
-        st.dataframe(
-            df.style.background_gradient(cmap="Blues", subset=[c for c in df.columns if 'Score' in c or 'Rating' in c]),
-            use_container_width=True, 
-            height=600
-        )
-        
-    except Exception as e:
-        st.error(f"Error reading intelligence output: {e}")
+            # Numeric filtering/gradient logic
+            n_cols_m = df_m.select_dtypes(include=['number']).columns
+            g_cols_m = [c for c in df_m.columns if ('Score' in c or 'Rating' in c) and c in n_cols_m]
+            st.dataframe(df_m.style.background_gradient(cmap="Blues", subset=g_cols_m) if g_cols_m else df_m, use_container_width=True, height=500)
+            
+            with open(OUTPUT_DIR / master_file, "rb") as f:
+                st.download_button("⬇️ Download Master Excel", f, file_name=master_file)
+        else:
+            st.info("Master Database not found. Run the full pipeline to generate it.")
+
+    with tab2:
+        if demo_file in report_names:
+            st.markdown(f"**Source:** `{demo_file}`")
+            xls_d = pd.ExcelFile(OUTPUT_DIR / demo_file)
+            s_d = st.selectbox("Sheet (Demo)", xls_d.sheet_names, key="d_sheet")
+            df_d = pd.read_excel(OUTPUT_DIR / demo_file, sheet_name=s_d)
+            
+            n_cols_d = df_d.select_dtypes(include=['number']).columns
+            g_cols_d = [c for c in df_d.columns if ('Score' in c or 'Rating' in c) and c in n_cols_d]
+            st.dataframe(df_d.style.background_gradient(cmap="Greens", subset=g_cols_d) if g_cols_d else df_d, use_container_width=True, height=500)
+            
+            with open(OUTPUT_DIR / demo_file, "rb") as f:
+                st.download_button("⬇️ Download Demo Report", f, file_name=demo_file)
+        else:
+            st.info("No Demo Report found. Run `python demo_run.py` to see live results here.")
 else:
-    st.info("No Master Excel file generated yet. Please run `python main.py` to initiate the multi-platform intelligence gathering process.")
+    st.info("No Excel reports generated yet.")
 
